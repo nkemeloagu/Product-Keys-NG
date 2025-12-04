@@ -73,12 +73,9 @@
             <p class="text-gray-600 text-lg leading-relaxed mb-4">
                 Product Keys NG is a dedicated vertical of Tidex Global Solutions, a one-stop shop for all your digital transformation needs. We help businesses of all sizes leverage the power of technology to achieve their goals and gain a competitive edge.
             </p>
-            <p class="text-gray-600 text-lg leading-relaxed mb-4">
-                Product Keys NG provides the foundational component: instant access to authentic, legitimate keys for essential software like Windows Server, Office LTSC, and SQL Server.
-            </p>
             <p class="text-green-600 font-semibold text-lg flex items-center">
                 <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                100% Genuine Commitment: Every key we sell is a valid commercial key guaranteed to activate and provide full manufacturer support. Buy with confidence.
+                100% Genuine Commitment: Every key we sell is a valid, single-use commercial key guaranteed to activate and provide full manufacturer support. Buy with confidence.
             </p>
         </section>
 
@@ -89,7 +86,7 @@
                    class="w-full p-3 border-2 border-gray-300 rounded-xl focus:border-blue-500 focus:ring focus:ring-blue-200 transition duration-150 text-lg shadow-inner">
         </div>
 
-        <!-- Status Message Area (Kept for general messaging, removed database specific messages) -->
+        <!-- Status Message Area (Used for form submission success) -->
         <div id="status-message" class="text-center p-3 mb-6 hidden rounded-xl font-medium" role="alert"></div>
 
         <!-- Product Display Grid -->
@@ -141,6 +138,69 @@
             </div>
         </section>
 
+        <!-- New Contact Form Section -->
+        <section class="mt-16 pt-10 border-t border-gray-300">
+            <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">Contact Us Directly</h2>
+            <div id="form-container" class="max-w-xl mx-auto bg-white p-8 rounded-2xl shadow-xl">
+                <p class="text-center text-gray-600 mb-6">
+                    Have a specific inquiry about volume licensing or a product key not listed? Send us a message below.
+                </p>
+                
+<!-- STATIC FORMS INTEGRATION START - USING API KEY FIELD -->
+                        <form id="contact-form" action="https://api.staticforms.xyz/submit" method="POST" class="space-y-4">
+                            
+                            <!-- 1. API Key (REQUIRED) -->
+                            <input type="hidden" name="apiKey" value="sf_g2mke36chjcd092akgn655jm"> 
+                            
+                            <!-- 2. Spam protection -->
+                            <input type="hidden" name="_gotcha" style="display:none"> 
+                            
+                            <!-- 3. Local Confirmation Marker -->
+                            <input type="hidden" name="redirectTo" value="none">
+                            
+                            <div id="form-content">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                                    <input type="text" id="name" name="Name" required placeholder="Jane Doe"
+                                           class="contact-input">
+                                </div>
+                                
+                                <!-- Company Name -->
+                                <div>
+                                    <label for="company" class="block text-sm font-medium text-gray-700 mb-1">Company Name</label>
+                                    <input type="text" id="company" name="Company Name" required placeholder="Acme Corp"
+                                           class="contact-input">
+                                </div>
+
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Work Email</label>
+                                    <input type="email" id="email" name="Email" required placeholder="you@company.com"
+                                           class="contact-input">
+                                </div>
+                                
+                                <!-- Phone Number -->
+                                <div>
+                                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number (with Country Code)</label>
+                                    <input type="tel" id="phone" name="Phone Number" required placeholder="+234 800 123 4567"
+                                           class="contact-input">
+                                </div>
+                                
+                                <div>
+                                    <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+                                    <textarea id="message" name="Message" rows="4" required placeholder="Tell us about your digital project goals..."
+                                        class="contact-input resize-none"></textarea>
+                                </div>
+
+                                <button type="submit" 
+                                        class="w-full py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition duration-300 shadow-md hover:shadow-lg">
+                                    Send Message
+                                </button>
+                            </div>
+                        </form>
+                <!-- STATIC FORMS INTEGRATION END -->
+            </div>
+        </section>
+
 
         <!-- Floating Contact Button for Quick Access -->
         <div class="fixed bottom-6 right-6 z-20">
@@ -148,9 +208,9 @@
                class="whatsapp-button bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition duration-300 focus:outline-none focus:ring-4 focus:ring-green-300">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12.031 3.238c-4.417 0-8 3.582-8 8.001 0 1.488.406 2.9.883 4.148l-1.01 3.737 3.82-1c1.171.644 2.476.993 3.507.993 4.418 0 8.001-3.582 8.001-8.001 0-4.419-3.583-8-8.001-8zM12.031 20.375c-.93 0-1.87-.245-2.67-.714l-.19-.111-1.956.513.522-1.892-.125-.198c-.538-.857-.862-1.832-.862-2.883 0-3.518 2.868-6.386 6.386-6.386 3.518 0 6.386 2.868 6.386 6.386 0 3.519-2.868 6.386-6.386 6.386zm3.32-4.998c-.143-.238-.501-.38-.934-.602-.455-.24-.95-.494-1.127-.557-.176-.062-.383-.093-.548.147-.165.238-.636.877-.775 1.054-.14.177-.28.199-.517.062-.236-.137-1.002-.369-1.902-1.171-.703-.637-1.171-1.418-1.309-1.656-.139-.239-.014-.372.102-.495.105-.125.236-.289.356-.432.12-.14.16-.239.223-.378.063-.14.032-.26-.016-.369-.047-.109-.548-1.319-.751-1.796-.197-.472-.397-.404-.548-.41-.127-.006-.272-.007-.417-.007s-.356.059-.548.261c-.187.197-.715.688-.715 1.674 0 .984.733 1.937.83 2.076.098.14.86 1.486 2.107 2.082 1.246.598 2.378.802 2.72.859.34.057.92.038 1.261-.318.34-.356.417-.751.482-.876.062-.124.124-.239.062-.358z"/>
-                </svg>
-            </a>
-        </div>
+                        </svg>
+                    </a>
+                </div>
     </main>
 
     <!-- Footer -->
@@ -168,7 +228,7 @@
                 <div class="flex items-center space-x-4">
                     <p>Contact/Support:</p>
                     <a href="tel:+2348111889720" class="flex items-center hover:text-green-400 transition duration-150">
-                        <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.748 3.018a1 1 0 01-.282.842l-1.95 1.625a1 1 0 00-.154 1.096l1.52 2.41a1 1 0 00.569.754l1.52 2.41a1 1 0 00.569.754l1.52 2.41a1 1 0 00.569.754l1.52 2.41a1 1 0 00.569.754l.012.008a1 1 0 00.672.247h2.153a1 1 0 001-1v-2.153a1 1 0 00-.836-.986l-3.018-.748a1 1 0 00-.842.282l-1.625 1.95a1 1 0 00-1.096.154l-2.41-1.52a1 1 0 00-.754-.569l-2.41-1.52a1 1 0 00-.754-.569l-2.41-1.52a1 1 0 00-.754-.569l-2.41-1.52a1 1 0 00-.754-.569l-.008-.012a1 1 0 00-.247-.672V3z"/>
+                        <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.748 3.018a1 1 0 01-.282.842l-1.95 1.625a1 1 0 00-.154 1.096l1.52 2.41a1 1 0 00.569.754l1.52 2.41a1 1 0 00.569.754l1.52 2.41a1 1 0 00.569.754l1.52 2.41a1 1 0 00.569.754l.012.008a1 1 0 00.672.247h2.153a1 1 0 001-1v-2.153a1 1 0 00-.836-.986l-3.018-.748a1 1 0 00-.842.282l-1.625 1.95a1 1 0 00-1.096.154l-2.41-1.52a1 1 0 00-.754-.569l-2.41-1.52a1 1 0 00-.754-.569l-2.41-1.52a1 1 0 00-.754-.569l-.008-.012a1 1 0 00-.247-.672V3z"/>
                     </svg>
                     +234 811 188 9720
                     </a>
@@ -193,6 +253,8 @@
 
         const productGrid = document.getElementById('product-grid');
         const searchInput = document.getElementById('product-search');
+        // Define the external API endpoint internally
+        const STATIC_FORMS_API = "https://api.staticforms.xyz/submit";
 
         // --- PRODUCT DATA (Hardcoded - 103 Lines) ---
         // This array is generated by parsing the latest OneTime Commercial price list provided by the user.
@@ -246,7 +308,7 @@ Outlook LTSC for Mac 2024		OneTime	₦242,250.00	Commercial
 PowerPoint LTSC 2024		OneTime	₦242,250.00	Commercial
 PowerPoint LTSC for Mac 2024		OneTime	₦242,250.00	Commercial
 Project Professional 2024		OneTime	₦1,440,750.00	Commercial
-Project Server 2019		OneTime	₦7,945,800.00	Commercial
+Project Server 2019		OneTime	₦7,945_800.00	Commercial
 Project Server CAL 2019		OneTime	₦308,550.00	Commercial
 Project Server CAL 2019		OneTime	₦237,150.00	Commercial
 Project Standard 2024		OneTime	₦867,000.00	Commercial
@@ -475,12 +537,115 @@ Word LTSC for Mac 2024		OneTime	₦242,250.00	Commercial
             renderProducts(allProducts);
         }
 
+        // --- Form Submission Handler (AJAX) ---
+        // We use fetch and prevent default redirection entirely.
+        async function handleSubmit(event) {
+            event.preventDefault(); 
+            
+            const form = event.target;
+            const submitButton = form.querySelector('button[type="submit"]');
+            const formData = new FormData(form);
+            const statusElement = document.getElementById('status-message');
+            const formContent = document.getElementById('form-content');
+
+            statusElement.textContent = 'Sending message...';
+            statusElement.className = `text-center p-3 mb-6 rounded-xl font-medium bg-blue-100 text-blue-700 block`;
+            submitButton.disabled = true;
+
+            // Construct payload manually from form data
+            const payload = {};
+            for (const [key, value] of formData.entries()) {
+                payload[key] = value;
+            }
+
+            try {
+                // Send data using fetch API
+                const response = await fetch(STATIC_FORMS_API, {
+                    method: 'POST',
+                    body: JSON.stringify(payload),
+                    headers: {
+                        'Content-Type': 'application/json',
+                        // StaticForms requires JSON if we don't use application/x-www-form-urlencoded,
+                        // which helps prevent redirection issues.
+                    }
+                });
+
+                // Since we prevent the default redirect, we assume success if the API endpoint is reached and returns OK
+                if (response.ok || response.status === 200 || response.status === 201) {
+                    
+                    // Display success message directly in the form area
+                    formContent.innerHTML = `
+                        <div class="text-center py-10">
+                            <svg class="w-12 h-12 text-green-600 mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Thank you. Your enquiry is submitted!</h3>
+                            <p class="text-gray-600">We will be in touch shortly regarding your licensing needs.</p>
+                            <p class="mt-4 text-sm text-gray-500">Alternatively, you can chat with us via WhatsApp for instant service.</p>
+                        </div>
+                    `;
+                    // Hide top status message since confirmation is now inline
+                    statusElement.classList.add('hidden'); 
+                    
+                } else {
+                    // Handle non-200 responses (e.g., API key issue, validation fail)
+                    const errorText = await response.text();
+                    statusElement.textContent = `Error: Submission failed (Status ${response.status}). Please verify your details or use WhatsApp.`;
+                    statusElement.className = `text-center p-3 mb-6 rounded-xl font-medium bg-red-100 text-red-700 block`;
+                    console.error("Form submission failed:", errorText);
+                }
+            } catch (error) {
+                console.error("Fetch error:", error);
+                statusElement.textContent = `Network Error: Could not reach the server. Please contact us via WhatsApp.`;
+                statusElement.className = `text-center p-3 mb-6 rounded-xl font-medium bg-red-100 text-red-700 block`;
+            } finally {
+                // Only enable button if an actual error occurred before form content was replaced
+                if (formContent.querySelector('button')) {
+                    submitButton.disabled = false;
+                }
+            }
+        }
+
+        // --- Post-load styling adjustment (to override the dark theme classes from the form template) ---
+        function applyFormStyling() {
+            const formInputs = document.querySelectorAll('#contact-form input:not([type="hidden"]), #contact-form textarea');
+            
+            formInputs.forEach(input => {
+                // Apply light theme Tailwind classes
+                input.classList.add('w-full', 'p-3', 'rounded-xl', 'bg-white', 'border', 'border-gray-300', 'text-gray-900', 'placeholder-gray-400', 'focus:ring-blue-500', 'focus:border-blue-500');
+                
+                // Remove the conflicting dark theme classes from the user's template (e.g., bg-slate-800)
+                input.classList.remove('rounded-lg', 'bg-slate-800', 'border-slate-600', 'text-white', 'placeholder-slate-500', 'focus:ring-accent', 'focus:border-accent');
+            });
+            
+            const formLabels = document.querySelectorAll('#contact-form label');
+            formLabels.forEach(label => {
+                // Adjust label colors to match light theme
+                label.classList.add('text-gray-700');
+                label.classList.remove('text-slate-300');
+            });
+            
+            const submitButton = document.querySelector('#contact-form button[type="submit"]');
+             if (submitButton) {
+                // Update button styling (matching the site's primary blue button style)
+                 submitButton.classList.remove('bg-accent', 'hover:bg-blue-600', 'transform', 'hover:scale-[1.01]', 'inline-flex', 'items-center', 'justify-center', 'px-4', 'border'); // Remove dark theme and unnecessary classes
+                 submitButton.classList.add('w-full', 'py-3', 'bg-blue-600', 'text-white', 'font-semibold', 'rounded-xl', 'hover:bg-blue-700', 'transition', 'duration-300', 'shadow-md', 'hover:shadow-lg');
+            }
+
+            // Attach the new AJAX submit handler
+            const form = document.getElementById('contact-form');
+            if (form) {
+                form.addEventListener('submit', handleSubmit);
+            }
+        }
+
 
         // --- EVENT LISTENERS ---
         searchInput.addEventListener('input', filterProducts);
         
         // --- START APPLICATION ---
-        window.onload = initializeProducts;
+        window.onload = () => {
+            initializeProducts();
+            applyFormStyling(); 
+        };
     </script>
 </body>
 </html>
