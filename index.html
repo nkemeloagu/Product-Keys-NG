@@ -388,7 +388,7 @@ Word LTSC for Mac 2024	₦242,250.00
 
         window.orderWhatsApp = (name, price) => {
             const msg = encodeURIComponent(`Procurement Enquiry: I would like to order ${name} (${price}). Please provide payment instructions.`);
-            window.open(`https://wa.me/2348111889720?text=${message}`, '_blank');
+            window.open(`https://wa.me/2348111889720?text=${msg}`, '_blank');
         };
 
         document.getElementById('product-search').addEventListener('input', (e) => {
@@ -426,7 +426,7 @@ Word LTSC for Mac 2024	₦242,250.00
                     document.getElementById('form-content').innerHTML = `
                         <div class="text-center py-16">
                             <div class="text-navy text-6xl mb-6">✓</div>
-                            <h3 class="text-2xl font-extrabold text-slate-900 mb-2">Request Submitted Successfully</h3>
+                            <h3 class="text-3xl font-extrabold text-slate-900 mb-2">Request Submitted Successfully</h3>
                             <p class="text-slate-500 text-lg">Thank you. Your procurement enquiry has been received. A Tidex Global Solutions representative will contact you with a formal quote shortly.</p>
                         </div>
                     `;
