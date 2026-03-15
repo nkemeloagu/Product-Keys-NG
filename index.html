@@ -2,68 +2,138 @@
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BYVWD9BXFG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-BYVWD9BXFG');
-</script>
-      <meta charset="UTF-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BYVWD9BXFG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BYVWD9BXFG');
+    </script>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Keys NG | Official Digital Licensing Portal</title>
+    <title>Product Keys NG | Premier Digital Licensing</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔑</text></svg>">
     <style>
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .corporate-shadow { box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 2px 10px -2px rgba(0, 0, 0, 0.03); }
-        .product-card { transition: all 0.2s ease-in-out; border: 1px solid #e5e7eb; }
-        .product-card:hover { border-color: #94a3b8; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
-        .bg-navy { background-color: #0f172a; }
-        .text-navy { color: #0f172a; }
+        :root {
+            --navy-deep: #020617;
+            --navy-accent: #0f172a;
+            --gold-accent: #d4af37;
+            --slate-light: #94a3b8;
+        }
+
+        body { 
+            font-family: 'Inter', sans-serif; 
+            scroll-behavior: smooth; 
+            background-color: var(--navy-deep); 
+            color: #f8fafc;
+        }
         
-        /* Custom Input Styling */
+        /* Glassmorphism Elements */
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+        }
+        
+        .product-card {
+            background: rgba(30, 41, 59, 0.2);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-8px);
+            background: rgba(30, 41, 59, 0.4);
+            border-color: var(--gold-accent);
+            box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.6);
+        }
+
+        .text-gold { color: var(--gold-accent); }
+        .bg-gold { background-color: var(--gold-accent); }
+
+        /* Smooth Input UI for Dark Theme */
         .procurement-input {
             width: 100%;
-            padding: 0.875rem;
-            border-radius: 0.5rem;
-            background-color: #f8fafc;
-            border: 1px solid #cbd5e1;
-            color: #1e293b;
-            transition: all 0.2s;
+            padding: 1rem;
+            border-radius: 1rem;
+            background-color: rgba(2, 6, 23, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: #ffffff;
+            transition: all 0.3s;
+            font-size: 0.9375rem;
         }
+        
         .procurement-input:focus {
-            background-color: #ffffff;
-            border-color: #0f172a;
-            box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.1);
+            background-color: rgba(15, 23, 42, 0.9);
+            border-color: var(--gold-accent);
+            box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.1);
             outline: none;
         }
+
+        .procurement-input::placeholder {
+            color: #475569;
+        }
+
+        /* Badge Styling */
+        .device-badge {
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0.25rem 0.6rem;
+            border-radius: 9999px;
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--gold-accent);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        /* Selection styling */
+        select.procurement-input option {
+            background-color: var(--navy-deep);
+            color: white;
+        }
+
+        /* Hero Text Gradient */
+        .hero-gradient {
+            background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--navy-deep); }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #334155; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col">
+<body class="min-h-screen flex flex-col">
 
     <!-- Header & Navigation -->
-    <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <span class="text-3xl">🔑</span>
+    <header class="bg-navy-deep/80 backdrop-blur-md border-b border-white/5 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <div class="w-10 h-10 bg-slate-900 flex items-center justify-center rounded-xl shadow-xl border border-white/10">
+                    <span class="text-xl">🔑</span>
+                </div>
                 <div>
-                    <h1 class="text-xl md:text-2xl font-bold tracking-tight text-slate-900">Product Keys NG</h1>
-                    <p class="text-[10px] uppercase tracking-widest font-semibold text-slate-500">Official Software Licensing Portal</p>
+                    <h1 class="text-lg md:text-xl font-extrabold tracking-tight text-white leading-none mb-1">Product Keys NG</h1>
+                    <p class="text-[8px] uppercase tracking-[0.2em] font-bold text-gold">Elite Licensing Solutions</p>
                 </div>
             </div>
             <div class="flex items-center space-x-6">
-                <nav class="hidden lg:flex space-x-8 text-sm font-medium text-slate-600">
-                    <a href="#catalog-section" class="hover:text-navy">Catalog</a>
-                    <a href="#order-section" class="hover:text-navy">Order Form</a>
+                <nav class="hidden lg:flex space-x-8 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">
+                    <a href="#catalog-section" class="hover:text-gold transition-colors">Portfolio</a>
+                    <a href="#order-section" class="hover:text-gold transition-colors">Procurement</a>
                 </nav>
                 <a href="#order-section" 
-                   class="bg-navy text-white text-xs font-bold py-2.5 px-5 rounded-full hover:bg-slate-800 transition flex items-center shadow-sm">
-                    SUBMIT PROCUREMENT REQUEST
+                   class="bg-gold text-navy-deep text-[10px] font-black py-2.5 px-6 rounded-full hover:brightness-110 transition-all shadow-lg shadow-gold/10 active:scale-95 uppercase tracking-widest">
+                    Request Quote
                 </a>
             </div>
         </div>
@@ -72,18 +142,38 @@
     <main class="flex-grow">
         
         <!-- Hero Section -->
-        <section id="hero-section" class="bg-navy py-16 text-white text-center md:text-left">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="max-w-3xl">
-                    <h2 class="text-blue-400 text-sm font-bold uppercase tracking-widest mb-3">Enterprise Software Procurement</h2>
-                    <h3 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">Authentic Licensing for Business Excellence.</h3>
-                    <p class="text-slate-300 text-lg leading-relaxed mb-8">
-                        Get 100% genuine licenses from Product Keys NG. We offer authentic commercial licensing with flexible installment payment options for businesses of every size.
+        <section id="hero-section" class="py-12 md:py-16 relative overflow-hidden">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(30,41,59,0.4),transparent)]"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="max-w-4xl">
+                    <div class="inline-flex items-center space-x-2 bg-white/5 px-4 py-1 rounded-full border border-white/10 mb-6">
+                        <span class="flex h-1.5 w-1.5 rounded-full bg-gold animate-pulse"></span>
+                        <span class="text-[9px] font-bold uppercase tracking-[0.2em] text-slate-300">Verified Commercial Partner</span>
+                    </div>
+                    
+                    <h2 class="text-4xl md:text-6xl font-extrabold mb-6 leading-[1.1] tracking-tight">
+                        <span class="hero-gradient">The Gold Standard in Digital Licensing.</span>
+                    </h2>
+                    
+                    <p class="text-slate-400 text-lg leading-relaxed mb-8 max-w-2xl font-light">
+                        Procure authentic commercial assets with institutional-grade security. High-volume licensing with <span class="text-white font-medium italic underline decoration-gold/50 underline-offset-8">bespoke installment facilities</span> for growing enterprises.
                     </p>
-                    <div class="flex flex-wrap justify-center md:justify-start gap-4">
-                        <div class="flex items-center space-x-2 bg-slate-800/50 px-4 py-2 rounded-lg border border-slate-700">
-                            <span class="text-green-400">✓</span>
-                            <span class="text-sm font-medium">Verified Commercial Keys</span>
+                    
+                    <div class="flex flex-wrap gap-8 pt-2">
+                        <div class="flex flex-col">
+                            <span class="text-2xl font-bold text-white mb-0.5">100%</span>
+                            <span class="text-[9px] uppercase tracking-widest text-gold font-bold">Authenticity</span>
+                        </div>
+                        <div class="w-px h-10 bg-white/10 hidden md:block"></div>
+                        <div class="flex flex-col">
+                            <span class="text-2xl font-bold text-white mb-0.5">24h</span>
+                            <span class="text-[9px] uppercase tracking-widest text-gold font-bold">Activation SLA</span>
+                        </div>
+                        <div class="w-px h-10 bg-white/10 hidden md:block"></div>
+                        <div class="flex flex-col">
+                            <span class="text-2xl font-bold text-white mb-0.5">0%</span>
+                            <span class="text-[9px] uppercase tracking-widest text-gold font-bold">Hidden Fees</span>
                         </div>
                     </div>
                 </div>
@@ -92,107 +182,115 @@
 
         <!-- Product Catalog Section -->
         <section id="catalog-section" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-10 gap-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-8 border-b border-white/5 pb-8">
                 <div>
-                    <h2 class="text-3xl font-bold text-slate-900 mb-2">Commercial Software Portfolio</h2>
-                    <p class="text-slate-500">Explore our catalog of perpetual licenses and server core keys.</p>
+                    <h2 class="text-3xl font-extrabold text-white mb-2 tracking-tight">Software Portfolio</h2>
+                    <p class="text-slate-400 text-base">Curated digital assets for modern infrastructure.</p>
                 </div>
-                <div class="w-full md:w-96">
-                    <div class="relative">
-                        <input type="text" id="product-search" placeholder="Filter by product name..." 
-                               class="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-slate-900 focus:border-slate-900 outline-none transition shadow-sm">
-                        <svg class="w-5 h-5 text-slate-400 absolute left-3 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                <div class="w-full md:w-[400px]">
+                    <div class="relative group">
+                        <input type="text" id="product-search" placeholder="Search portfolio..." 
+                               class="w-full pl-12 pr-6 py-3.5 rounded-2xl border border-white/10 bg-white/5 focus:bg-white/10 focus:border-gold/50 outline-none transition-all text-sm font-medium text-white">
+                        <svg class="w-5 h-5 text-slate-500 absolute left-4 top-3 group-focus-within:text-gold transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                     </div>
                 </div>
             </div>
 
-            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                <!-- Data injected by JS -->
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Cards injected via JavaScript -->
             </div>
         </section>
 
         <!-- Secure Order Form Section -->
-        <section id="order-section" class="bg-slate-100 py-20 border-y border-slate-200 scroll-mt-24">
-            <div class="max-w-4xl mx-auto px-4">
-                <div id="form-container" class="bg-white p-8 md:p-12 rounded-3xl corporate-shadow border border-slate-200">
-                    <div class="text-center mb-10">
-                        <span class="inline-block px-3 py-1 bg-slate-100 text-slate-600 text-[10px] font-bold uppercase tracking-widest rounded mb-4">Official Procurement</span>
-                        <h2 class="text-3xl font-extrabold text-slate-900">Submit Procurement Request</h2>
-                        <p class="text-slate-500 mt-2">Request a formal quote or installment plan for your organization.</p>
+        <section id="order-section" class="py-24 relative scroll-mt-24">
+            <div class="absolute inset-0 bg-navy-accent/20 pointer-events-none"></div>
+            <div class="max-w-5xl mx-auto px-4 relative z-10">
+                <div id="form-container" class="glass-panel p-8 md:p-12 rounded-[40px] border border-white/5 relative overflow-hidden shadow-2xl">
+                    <div class="text-center mb-12">
+                        <span class="inline-block px-4 py-1.5 bg-gold/10 text-gold text-[9px] font-bold uppercase tracking-[0.3em] rounded-full mb-6 border border-gold/20">Institutional Procurement</span>
+                        <h2 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight">Formal Request for Quote</h2>
+                        <p class="text-slate-400 mt-4 text-lg font-light">Complete the request below to receive a customized corporate offer.</p>
                     </div>
 
-                    <div id="status-message" class="text-center p-4 mb-8 hidden rounded-xl font-medium" role="alert"></div>
+                    <div id="status-message" class="text-center p-5 mb-10 hidden rounded-2xl font-bold transition-all border border-white/10 bg-white/5" role="alert"></div>
 
                     <form id="contact-form" action="https://api.staticforms.xyz/submit" method="POST" class="space-y-8">
                         <input type="hidden" name="apiKey" value="sf_g2mke36chjcd092akgn655jm"> 
                         <input type="hidden" name="_gotcha" style="display:none"> 
                         <input type="hidden" name="redirectTo" value="none">
 
-                        <div id="form-content" class="space-y-8">
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Full Name</label>
-                                    <input type="text" name="Name" required placeholder="Jane Doe" class="procurement-input">
+                        <div id="form-content" class="space-y-10">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div class="space-y-2">
+                                    <label class="block text-[11px] font-bold text-slate-500 uppercase tracking-widest px-1">Lead Contact</label>
+                                    <input type="text" name="Name" required placeholder="Full Name" class="procurement-input">
                                 </div>
-                                <div>
-                                    <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Company Name</label>
-                                    <input type="text" name="Company Name" required placeholder="Organization Name" class="procurement-input">
+                                <div class="space-y-2">
+                                    <label class="block text-[11px] font-bold text-slate-500 uppercase tracking-widest px-1">Organization</label>
+                                    <input type="text" name="Company Name" required placeholder="Company Legal Name" class="procurement-input">
                                 </div>
-                                <div>
-                                    <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Work Email</label>
-                                    <input type="email" name="Email" required placeholder="corporate@domain.com" class="procurement-input">
+                                <div class="space-y-2">
+                                    <label class="block text-[11px] font-bold text-slate-500 uppercase tracking-widest px-1">Corporate Email</label>
+                                    <input type="email" name="Email" required placeholder="email@company.com" class="procurement-input">
                                 </div>
-                                <div>
-                                    <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Phone Number</label>
+                                <div class="space-y-2">
+                                    <label class="block text-[11px] font-bold text-slate-500 uppercase tracking-widest px-1">Direct Line</label>
                                     <input type="tel" name="Phone Number" required placeholder="+234..." class="procurement-input">
                                 </div>
                             </div>
 
-                            <div class="border-t border-slate-100 pt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-                                <div class="md:col-span-2">
-                                    <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Product Selection</label>
-                                    <select id="product-dropdown" name="Product" required class="procurement-input appearance-none bg-white">
-                                        <option value="" disabled selected>Choose a software key...</option>
+                            <div class="bg-white/5 p-8 rounded-3xl border border-white/5 grid grid-cols-1 md:grid-cols-3 gap-8 shadow-inner">
+                                <div class="md:col-span-2 space-y-2">
+                                    <label class="block text-[11px] font-bold text-slate-500 uppercase tracking-widest px-1">Primary Asset Selection</label>
+                                    <select id="product-dropdown" name="Product" required class="procurement-input appearance-none">
+                                        <option value="" disabled selected>Select from portfolio...</option>
                                     </select>
                                 </div>
-                                <div>
-                                    <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Quantity</label>
+                                <div class="space-y-2">
+                                    <label class="block text-[11px] font-bold text-slate-500 uppercase tracking-widest px-1">Asset Volume</label>
                                     <input type="number" id="qty-input" name="Quantity" min="1" value="1" required class="procurement-input">
                                 </div>
                             </div>
 
                             <!-- Payment Plan -->
-                            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
-                                <label class="flex items-center space-x-3 cursor-pointer">
-                                    <input type="checkbox" id="payment-plan-checkbox" name="Request Payment Plan" value="Yes" class="w-5 h-5 text-slate-900 rounded border-slate-300 focus:ring-slate-900">
-                                    <span class="text-sm font-bold text-slate-700">Request a Flexible Payment Plan</span>
-                                </label>
+                            <div class="bg-gold/10 p-[1px] rounded-[32px]">
+                                <div class="bg-navy-deep/80 p-6 md:p-10 rounded-[31px] space-y-6 backdrop-blur-md">
+                                    <label class="flex items-center space-x-4 cursor-pointer group">
+                                        <div class="relative w-6 h-6">
+                                            <input type="checkbox" id="payment-plan-checkbox" name="Request Payment Plan" value="Yes" class="peer appearance-none w-6 h-6 border-2 border-white/10 rounded-lg checked:bg-gold checked:border-gold transition-all">
+                                            <svg class="absolute top-1 left-1 w-4 h-4 text-navy-deep opacity-0 peer-checked:opacity-100 pointer-events-none transition-opacity" fill="none" stroke="currentColor" stroke-width="4" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                                        </div>
+                                        <span class="text-sm font-extrabold text-slate-300 uppercase tracking-widest group-hover:text-gold transition-colors">Apply for Extended Installment Facility</span>
+                                    </label>
 
-                                <div id="payment-plan-options" class="hidden mt-6 pt-6 border-t border-slate-200 space-y-4">
-                                    <div>
-                                        <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Plan Duration</label>
-                                        <select id="plan-months" name="Plan Duration" class="procurement-input bg-white">
-                                            <option value="2">2 Months (Bi-Monthly)</option>
-                                            <option value="3">3 Months (Quarterly)</option>
-                                            <option value="4">4 Months Plan</option>
-                                            <option value="5">5 Months Plan</option>
-                                            <option value="6">6 Months (Half-Year)</option>
-                                        </select>
-                                    </div>
-                                    <div class="bg-white p-4 rounded-xl border border-slate-200 flex justify-between items-center">
-                                        <span class="text-sm text-slate-500 font-medium">Estimated Monthly Installment:</span>
-                                        <span id="monthly-installment" class="text-xl font-extrabold text-navy">₦0.00</span>
+                                    <div id="payment-plan-options" class="hidden mt-6 pt-6 border-t border-white/5 animate-in fade-in slide-in-from-top-4 duration-500">
+                                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                                            <div class="space-y-2">
+                                                <label class="block text-[11px] font-bold text-slate-500 uppercase tracking-widest px-1">Facility Term</label>
+                                                <select id="plan-months" name="Plan Duration" class="procurement-input">
+                                                    <option value="2">2 Months (Standard)</option>
+                                                    <option value="3">3 Months (Quarterly)</option>
+                                                    <option value="4">4 Months (Flexible)</option>
+                                                    <option value="5">5 Months (Extended)</option>
+                                                    <option value="6">6 Months (Executive)</option>
+                                                </select>
+                                            </div>
+                                            <div class="bg-black/20 p-6 rounded-2xl flex flex-col justify-center items-center text-center border border-white/5 shadow-inner">
+                                                <span class="text-[10px] text-slate-500 font-bold uppercase tracking-[0.2em] mb-2">Estimated Monthly Commitment</span>
+                                                <span id="monthly-installment" class="text-3xl font-black text-gold tracking-tight">₦0.00</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div>
-                                <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Procurement Notes</label>
-                                <textarea name="Message" rows="3" placeholder="Specify any additional licensing requirements..." class="procurement-input resize-none"></textarea>
+                            <div class="space-y-2">
+                                <label class="block text-[11px] font-bold text-slate-500 uppercase tracking-widest px-1">Specific Licensing Requirements</label>
+                                <textarea name="Message" rows="3" placeholder="Volume licensing notes, previous deployment details..." class="procurement-input resize-none"></textarea>
                             </div>
 
-                            <button type="submit" class="w-full py-4 bg-navy text-white font-bold rounded-xl hover:bg-slate-800 transition shadow-lg text-lg">
-                                SEND PROCUREMENT REQUEST
+                            <button type="submit" class="w-full py-5 bg-gold text-navy-deep font-black rounded-2xl hover:brightness-110 transition-all shadow-2xl shadow-gold/20 text-lg uppercase tracking-[0.3em] active:scale-[0.98]">
+                                Send Request
                             </button>
                         </div>
                     </form>
@@ -202,23 +300,32 @@
 
     </main>
 
-    <footer class="bg-white border-t border-slate-200 py-12">
-        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12">
+    <footer class="bg-navy-deep border-t border-white/5 py-16 text-xs">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-16">
             <div class="col-span-1">
-                <p class="font-bold text-lg mb-4">Product Keys NG</p>
-                <p class="text-slate-500 text-sm leading-relaxed">
-                    Nigeria's trusted vertical for certified digital asset procurement. Legitimate commercial licensing for modern businesses.
+                <div class="flex items-center space-x-3 mb-6">
+                    <span class="text-2xl">🔑</span>
+                    <span class="font-black text-xl tracking-tight text-white">Product Keys NG</span>
+                </div>
+                <p class="text-slate-500 text-sm leading-relaxed font-light mb-8">
+                    The continent's premier portal for commercial software authentication. We bridge the gap between global technology providers and growing enterprises.
                 </p>
             </div>
             <div class="col-span-1">
-                <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Contact Info</p>
-                <p class="text-slate-700 text-sm mb-2">Kudirat Abiola Way, Allen, Ikeja, Lagos</p>
-                <p class="text-slate-700 text-sm font-semibold">+234 811 188 9720</p>
-                <p class="text-slate-700 text-sm">sales@productkeys.com.ng</p>
+                <p class="text-[10px] font-bold text-gold uppercase tracking-[0.4em] mb-8 border-b border-white/5 pb-2 inline-block">Headquarters</p>
+                <p class="text-slate-300 text-sm font-medium leading-loose">
+                    Kudirat Abiola Way<br>
+                    Allen, Ikeja, Lagos<br>
+                    <span class="font-bold text-white">+234 811 188 9720</span><br>
+                    <span class="text-slate-500">sales@productkeys.com.ng</span>
+                </p>
             </div>
             <div class="col-span-1 md:text-right">
-                <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Legal</p>
-                <p class="text-slate-500 text-xs italic">All product names, logos, and brands are property of their respective owners. Product Keys NG is an independent licensing provider.</p>
+                <p class="text-[10px] font-bold text-slate-500 uppercase tracking-[0.4em] mb-8 border-b border-white/5 pb-2 inline-block">Authorized Vendor</p>
+                <p class="text-slate-500 text-[11px] italic leading-relaxed">
+                    Product Keys NG operates as an independent, verified licensing partner. All intellectual property remains owned by the respective software manufacturers.
+                </p>
+                <p class="mt-8 text-[10px] font-bold text-slate-600">© 2024 Product Keys NG. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
@@ -284,14 +391,14 @@ Windows Server 2022 Remote Desktop Services	₦155,295.00
 Windows Server 2022 User CAL	₦34,807.50
 Windows Server 2022 Device CAL	₦34,807.50
 Windows Server 2022 Data Center Core	₦6,042,225.00
-Windows Server 2022 Rights Management External Connector	₦17,893,732.50
+Windows Server Rights Management External Connector	₦17,893,732.50
 Windows Server 2022 Standard Core	₦1,049,580.00
 Windows Server 2025 External Connector	₦3,114,825.00
 Windows Server 2025 Remote Desktop Services	₦221,850.00
 Windows Server 2025 User CAL	₦49,725.00
 Windows Server 2025 Device CAL	₦49,725.00
 Windows Server 2025 Data Center Core	₦8,631,750.00
-Windows Server 2025 Rights Management External Connector	₦25,562,475.00
+Windows Server Rights Management External Connector	₦25,562,475.00
 Windows Server 2025 Standard Core	₦1,499,400.00
 Word LTSC 2024 (Activates 5 devices)	₦100,000.00
 Word LTSC for Mac 2024 (Activates 1 device)	₦100,000.00
@@ -331,7 +438,13 @@ Word LTSC for Mac 2024 (Activates 1 device)	₦100,000.00
             const lines = rawData.trim().split('\n').slice(1);
             products = lines.map(l => {
                 const parts = l.split('\t');
-                return { name: parts[0], price: parseCurrency(parts[1]), priceStr: parts[1] };
+                const titleMatch = parts[0].match(/(.*)\((Activates.*)\)/);
+                return { 
+                    name: titleMatch ? titleMatch[1].trim() : parts[0], 
+                    badge: titleMatch ? titleMatch[2].trim() : null,
+                    price: parseCurrency(parts[1]), 
+                    priceStr: parts[1] 
+                };
             });
 
             products.forEach(p => {
@@ -349,23 +462,22 @@ Word LTSC for Mac 2024 (Activates 1 device)	₦100,000.00
             grid.innerHTML = '';
             list.forEach(p => {
                 const div = document.createElement('div');
-                div.className = 'bg-white p-6 rounded-2xl product-card flex flex-col justify-between';
+                div.className = 'p-8 rounded-3xl product-card flex flex-col justify-between';
                 div.innerHTML = `
-                    <div class="mb-6">
-                        <div class="flex items-center justify-center w-10 h-10 bg-slate-50 border border-slate-200 rounded-lg mb-4 text-slate-400">
-                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    <div class="mb-8">
+                        <div class="flex items-center justify-center w-12 h-12 bg-white/5 border border-white/10 rounded-xl mb-6 text-gold">
+                             <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"></path></svg>
                         </div>
-                        <h3 class="font-bold text-slate-800 leading-tight mb-2 min-h-[3rem] line-clamp-2 text-sm">${p.name}</h3>
-                        <p class="text-xl font-bold text-navy">${p.priceStr}</p>
+                        ${p.badge ? `<span class="device-badge mb-4 inline-block">${p.badge}</span>` : ''}
+                        <h3 class="font-bold text-white leading-tight mb-2 min-h-[3rem] line-clamp-2 text-base tracking-tight">${p.name}</h3>
+                        <p class="text-2xl font-black text-gold">${p.priceStr}</p>
                     </div>
-                    <div class="space-y-2">
-                        <button onclick="orderForm('${p.name}')" class="w-full py-2.5 bg-navy text-white text-[10px] font-bold uppercase tracking-wider rounded-lg hover:bg-slate-800 transition flex items-center justify-center">
-                            <svg class="w-3 h-3 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                            Order via Form
+                    <div class="space-y-4 pt-4 border-t border-white/5">
+                        <button onclick="orderForm('${p.name}')" class="w-full py-3.5 bg-gold text-navy-deep text-[10px] font-black uppercase tracking-[0.2em] rounded-xl hover:brightness-110 transition-all flex items-center justify-center">
+                            Procurement Request
                         </button>
-                        <button onclick="orderWhatsApp('${p.name}', '${p.priceStr}')" class="w-full py-2.5 text-[10px] text-slate-500 font-bold uppercase tracking-wider hover:text-emerald-600 transition flex items-center justify-center">
-                            <svg class="w-3 h-3 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 3.238c-4.417 0-8 3.582-8 8.001 0 1.488.406 2.9.883 4.148l-1.01 3.737 3.82-1c1.171.644 2.476.993 3.507.993 4.418 0 8.001-3.582 8.001-8.001 0-4.419-3.583-8-8.001-8zM12.031 20.375c-.93 0-1.87-.245-2.67-.714l-.19-.111-1.956.513.522-1.892-.125-.198c-.538-.857-.862-1.832-.862-2.883 0-3.518 2.868-6.386 6.386-6.386 3.518 0 6.386 2.868 6.386 6.386 0 3.519-2.868 6.386-6.386 6.386zm3.32-4.998c-.143-.238-.501-.38-.934-.602-.455-.24-.95-.494-1.127-.557-.176-.062-.383-.093-.548.147-.165.238-.636.877-.775 1.054-.14.177-.28.199-.517.062-.236-.137-1.002-.369-1.902-1.171-.703-.637-1.171-1.418-1.309-1.656-.139-.239-.014-.372.102-.495.105-.125.236-.289.356-.432.12-.14.16-.239.223-.378.063-.14.032-.26-.016-.369-.047-.109-.548-1.319-.751-1.796-.197-.472-.397-.404-.548-.41-.127-.006-.272-.007-.417-.007s-.356.059-.548.261c-.187.197-.715.688-.715 1.674 0 .984.733 1.937.83 2.076.098.14.86 1.486 2.107 2.082 1.246.598 2.378.802 2.72.859.34.057.92.038 1.261-.318.34-.356.417-.751.482-.876.062-.124.124-.239.062-.358z"/></svg>
-                            Order via WhatsApp
+                        <button onclick="orderWhatsApp('${p.name}', '${p.priceStr}')" class="w-full py-2.5 text-[10px] text-slate-400 font-bold uppercase tracking-[0.2em] hover:text-gold transition flex items-center justify-center group">
+                            <span class="mr-2 opacity-40 group-hover:opacity-100 transition-opacity">⚡</span> WhatsApp Chat
                         </button>
                     </div>`;
                 grid.appendChild(div);
@@ -375,7 +487,7 @@ Word LTSC for Mac 2024 (Activates 1 device)	₦100,000.00
         window.orderForm = (name) => {
             document.getElementById('order-section').scrollIntoView({ behavior: 'smooth' });
             for(let i=0; i<dropdown.options.length; i++) {
-                if(dropdown.options[i].value.startsWith(name)) {
+                if(dropdown.options[i].value.toLowerCase().includes(name.toLowerCase())) {
                     dropdown.selectedIndex = i;
                     break;
                 }
@@ -384,7 +496,7 @@ Word LTSC for Mac 2024 (Activates 1 device)	₦100,000.00
         };
 
         window.orderWhatsApp = (name, price) => {
-            const message = encodeURIComponent(`Order Enquiry: I would like to purchase the ${name} license key for ${price}. Please provide payment instructions.`);
+            const message = encodeURIComponent(`Formal Procurement Enquiry: I would like to request an offer for the ${name} license key currently listed at ${price}. Please provide activation and payment details.`);
             window.open(`https://wa.me/2348111889720?text=${message}`, '_blank');
         };
 
@@ -394,7 +506,11 @@ Word LTSC for Mac 2024 (Activates 1 device)	₦100,000.00
         });
 
         ppCheckbox.addEventListener('change', () => {
-            ppOptions.style.display = ppCheckbox.checked ? 'block' : 'none';
+            if (ppCheckbox.checked) {
+                ppOptions.classList.remove('hidden');
+            } else {
+                ppOptions.classList.add('hidden');
+            }
             calculate();
         });
 
@@ -410,8 +526,8 @@ Word LTSC for Mac 2024 (Activates 1 device)	₦100,000.00
             const data = new FormData(form);
 
             btn.disabled = true;
-            status.textContent = "Processing Request...";
-            status.className = "text-center p-4 mb-8 rounded-xl font-bold bg-slate-200 text-slate-800 block";
+            status.textContent = "Authenticating Request...";
+            status.className = "text-center p-5 mb-10 rounded-2xl font-black uppercase tracking-widest bg-white/10 text-white block text-xs border-white/10";
 
             try {
                 const res = await fetch("https://api.staticforms.xyz/submit", {
@@ -421,17 +537,17 @@ Word LTSC for Mac 2024 (Activates 1 device)	₦100,000.00
                 });
                 if (res.ok) {
                     document.getElementById('form-content').innerHTML = `
-                        <div class="text-center py-16">
-                            <div class="text-navy text-6xl mb-6">✓</div>
-                            <h3 class="text-3xl font-extrabold text-slate-900 mb-2">Request Submitted Successfully</h3>
-                            <p class="text-slate-500 text-lg">Thank you. Your procurement enquiry has been received. Our team will contact you with a formal quote shortly.</p>
+                        <div class="text-center py-24">
+                            <div class="text-gold text-7xl mb-8 animate-pulse">✨</div>
+                            <h3 class="text-4xl font-black text-white mb-4 tracking-tight uppercase">Request Received</h3>
+                            <p class="text-slate-400 text-lg max-w-lg mx-auto leading-relaxed">Your procurement request has been transmitted. An executive account manager will provide your formal offer.</p>
                         </div>
                     `;
                     status.classList.add('hidden');
                 } else { throw new Error(); }
             } catch {
-                status.textContent = "Submission failed. Please contact us directly via WhatsApp.";
-                status.className = "text-center p-4 mb-8 rounded-xl font-bold bg-red-100 text-red-700 block";
+                status.textContent = "Communication Error. Please utilize Direct WhatsApp for priority processing.";
+                status.className = "text-center p-5 mb-10 rounded-2xl font-black uppercase tracking-widest bg-red-500/20 text-red-400 block text-xs border-red-500/30";
                 btn.disabled = false;
             }
         });
